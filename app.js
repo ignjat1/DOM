@@ -166,3 +166,47 @@ li[1].style.fntWeight = "bold"
  container.style.backgroundColor = "purple"
 //textContent vs innerText
 //QuerySelector 
+
+let listItem = document.getElementById("items")
+console.log(listItem.parentNode.parentNode)
+
+//parentElement
+
+console.log(listenItem.parentElement)
+
+listItem.parentElement.stylebackgroundColor = "red"
+
+//children (element)
+
+//console.log(listItem.children)
+
+//listItem.children[0].style.backgroundColor = "yellow"
+
+//firstChild (node)
+
+console.log(listItem.firstChild); //console.log(listItem.childNodes[0])
+
+//firstElementChild (element)
+
+console.log(listItem.firstElementChild)//console.log(listItem.children[0])
+
+//lastChild  (node)
+//lastElementChild (element)
+
+//sibling 
+
+console.log(listItem.previousElementSibling)
+listItem.previousElementSibling.style.backgroundColor = "brown"
+
+console.log(listItem.nextElementSibling)
+
+listItem.nextElementSibling.style.backgroundColor = "red"   
+
+let lista = document.querySelectorAll(".list-item");
+
+console.log(lista)
+lista[1].previousElementSibling.style.backgroundColor = "blue"
+lista[1].nextElementSibling.style.backgroundColor = "lightblue"
+
+lista[1].parentElement.parentElement.style.backgroundColor = "orange"
+
