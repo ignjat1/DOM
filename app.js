@@ -130,7 +130,7 @@ for(e of niz){
 //console.log(document.all[8])
 
 //document.all[8].textContent = "Drugi naslov"
-
+/*
 console.log(document.forms);
 console.log(document.forms[0]);
 
@@ -209,4 +209,39 @@ lista[1].previousElementSibling.style.backgroundColor = "blue"
 lista[1].nextElementSibling.style.backgroundColor = "lightblue"
 
 lista[1].parentElement.parentElement.style.backgroundColor = "orange"
+*/
 
+let newDiv = document.createElement("div");
+let textNode = document.createTextcode("Napravio sam novi element");
+
+let div2=document.createElement("div");
+let createtextNode=document.createTextNode("tekst")
+div2.appemdChild(textNode);
+
+let google=document.getElementById("google")
+let a=document.querySelector("#google p")
+google.insertBefore(div2,a)
+
+//izaberemen element  u koji houc da stavim novi element
+let divContainer = document.getElementById("paragraf")
+//izaberem element pored kog hocu da stavim novi element
+let divParagraf = document.querySelector("#paragraf p");
+//stavim element u divContainer pored divParagraf
+divContainer.insertBefore(newP, divParagraf)
+let newLi = document.createElement("li");
+let newText = document.createTextNode("Novi item");
+newLi.appendChild(newText);
+let items = document.getElementById("items");
+console.log(ietms.childNodes)
+items.insertBefore(newLi,items.lastChild.nextSibling);  
+
+let addNewItemToList = function () {
+  let text = textBox.value;
+  let newLi = document.createElement("li");
+  let newText = document.createTextNode(text);
+  newLi.appendChild(newText);
+  let items = document.getElementById("items");
+  console.log(items.childNodes)
+  items.insertBefore(newLi, items.lastChild.nextSibling);
+}
+GamepadButton.addEventListener ('click', addNewItemToList)
